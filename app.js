@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-require('dotenv').config()
 
 app.get('/hello-world', (req, res) => {
     res.json({
@@ -8,6 +7,6 @@ app.get('/hello-world', (req, res) => {
     })
 })
 
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`running at http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`)
+app.listen(4000, () => {
+    console.log(`running at http://localhost:4000`)
 })
