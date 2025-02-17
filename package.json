@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/ekaapedia/node/issues"
   },
-  "homepage": "https://github.com/ekaapedia/node#readme"
+  "homepage": "https://github.com/ekaapedia/node#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
+  }
 }
