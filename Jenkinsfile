@@ -11,7 +11,16 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ekaapedia/node.git' // Ganti dengan repository-mu
+                script {
+                    checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/main']], // Sesuaikan dengan nama branch
+                        userRemoteConfigs: [[
+                            url: 'https://github.com/ekaapedia/node.git', // Ganti dengan repository-mu
+                            credentialsId: 'github' // Sesuai dengan ID credential yang dibuat
+                        ]]
+                    ])
+                }
             }
         }
 
