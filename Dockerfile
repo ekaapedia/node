@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Perintah untuk menjalankan aplikasi
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
